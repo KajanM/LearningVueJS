@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="app">
-      <p>{{title}}</p>
+      <p>{{sayHello()}}</p>
     </div>
 
     <script>
@@ -15,6 +15,11 @@
         el: '#app',
         data: {
           title: 'Hello World'
+        },
+        methods: {
+          sayHello: function() {
+            return 'Hello';
+          }
         }
       })
     </script>
