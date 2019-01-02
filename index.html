@@ -7,31 +7,17 @@
   </head>
   <body>
     <div id="app">
-      <button v-on:click="incrementCounter(2)">Increase</button>
-      <p>{{counter}}</p>
-      <p v-on:mousemove="updateCoordinates">
-        Coordinates: {{x}}/{{y}}
-         - <span v-on:mousemove.stop>DEAD SPOT</span>
-      </p>
-      <input type="text" v-on:keyup.enter.space="alertMe">
+      <p>{{name}}</p>
+      <input type="text" v-model="name">
     </div>
 
     <script>
       new Vue({
         el: '#app',
         data: {
-          counter: 0,
-          x: 0,
-          y: 0
+          name: 'Max'
         },
         methods: {
-          incrementCounter: function(step) {
-            this.counter += step;
-          },
-          updateCoordinates: function(event) {
-            this.x = event.clientX;
-            this.y = event.clientY;
-          },
           alertMe: function() {
             alert('Alert');
           }
