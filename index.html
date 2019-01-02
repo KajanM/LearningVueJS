@@ -7,10 +7,8 @@
   </head>
   <body>
     <div id="app">
-      <h1 v-once>{{title}}</h1>
-      <p>{{sayHello()}} - <a v-bind:href="link">Google</a></p>
-      <hr>
-      <p v-html="finishedLink"></p>
+      <button v-on:click="incrementCounter">Increase</button>
+      <p>{{counter}}</p>
 
     </div>
 
@@ -18,14 +16,11 @@
       new Vue({
         el: '#app',
         data: {
-          title: 'Hello World',
-          link: 'https://www.google.com',
-          finishedLink: '<a href="https://www.google.com">Google</a>'
+          counter: 0
         },
         methods: {
-          sayHello: function() {
-            this.title = 'Hello';
-            return this.title;
+          incrementCounter: function() {
+            this.counter++;
           }
         }
       })
