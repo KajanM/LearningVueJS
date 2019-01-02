@@ -9,6 +9,7 @@
     <div id="app">
       <button v-on:click="incrementCounter">Increase</button>
       <p>{{counter}}</p>
+      <p v-on:mousemove="updateCoordinates">Coordinates: {{x}}/{{y}}</p>
 
     </div>
 
@@ -16,11 +17,17 @@
       new Vue({
         el: '#app',
         data: {
-          counter: 0
+          counter: 0,
+          x: 0,
+          y: 0
         },
         methods: {
           incrementCounter: function() {
             this.counter++;
+          },
+          updateCoordinates: function(event) {
+            this.x = event.clientX;
+            this.y = event.clientY;
           }
         }
       })
