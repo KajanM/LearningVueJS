@@ -1,7 +1,8 @@
 new Vue({
   el: '#app',
   data: {
-    attachRed: false
+    attachRed: false,
+    color: ''
   },
   methods: {
     result: function() {

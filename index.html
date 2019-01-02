@@ -12,7 +12,9 @@
       @click="attachRed = !attachRed"
       :class="divClasses"></div>
       <div class="demo"></div>
-      <div class="demo"></div>
+      <div class="demo" :class="[color, {red: attachRed}]"></div>
+      <hr>
+      <input type="text" v-model="color">
     </div>
   </body>
   <script src="app.js"></script>
