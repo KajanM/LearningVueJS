@@ -4,6 +4,14 @@ new Vue({
     counter: 0,
     secondCounter: 0
   },
+  watch: {
+    counter: function (value) {
+      var vm = this;
+      setTimeout(function () {
+        vm.counter = 0;
+      }, 2000)
+    }
+  },
   computed: {
     output: function () {
       console.log('Computed');
