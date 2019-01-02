@@ -7,22 +7,12 @@
   </head>
   <body>
     <div id="app">
-      <p>{{name}}</p>
-      <input type="text" v-model="name">
+      <button v-on:click="counter++">Increase</button>
+      <button v-on:click="counter--">Decrease</button>
+      <button v-on:click="secondCounter++">Increase second</button>
+      <p>{{counter}} | {{secondCounter}}</p>
+      <p>{{result()}} | {{output}}</p>
     </div>
-
-    <script>
-      new Vue({
-        el: '#app',
-        data: {
-          name: 'Max'
-        },
-        methods: {
-          alertMe: function() {
-            alert('Alert');
-          }
-        }
-      })
-    </script>
   </body>
+  <script src="app.js"></script>
 </html>
