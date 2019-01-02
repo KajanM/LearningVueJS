@@ -1,18 +1,17 @@
 new Vue({
   el: '#app',
   data: {
-    attachRed: false,
-    color: ''
+    color: '',
+    width: ''
   },
   methods: {
-    result: function() {
-      console.log('Method');
-      return this.counter > 5 ? 'Greater than 5' : 'Equal or smaller than 5';
-    }
   },
   computed: {
-    divClasses: function() {
-      return { red: this.attachRed, blue: !this.attachRed };
-    }
+    myStyle: function () {
+      return {
+        backgroundColor: this.color,
+        width: this.width + 'px'
+      };
+   }
   }
 });
